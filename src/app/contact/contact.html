@@ -1,0 +1,84 @@
+<!-- Start Content Page -->
+<div class="container-fluid py-5" style="background-color: var(--white-green-color);">
+    <div class="col-lg-6 m-auto text-center" data-aos="fade-up" data-aos-duration="700">
+        <h1 class="fw-bold" style="color: var(--green-color);">
+            CONTACT US
+        </h1>
+        <p>
+            We're open for any suggestion or just to have a chat. <br> Feel free to reach out to us by filling the form
+            below and we'll get back to you as soon as we can.
+        </p>
+    </div>
+</div>
+
+<!-- Contact section -->
+<section>
+    <div class="d-flex p-5 contact-container">
+        <div class="p-2 re-box" data-aos="fade-right" data-aos-duration="800">
+            <div class="p-5 d-flex align-items-center justify-content-center shade"
+                style="background-color: var(--green-color);">
+                <i class="bi bi-phone-vibrate text-light icon-clamp me-3" style="font-size: 70px;"></i>
+                <h1 class="text-light responsive-text">0961234567</h1>
+            </div>
+        </div>
+        <div class="p-2 re-box" data-aos="fade-left" data-aos-duration="900">
+            <div class="p-5 d-flex align-items-center justify-content-center shade"
+                style="background-color: var(--green-color);">
+                <i class="bi bi-envelope-at-fill text-light icon-clamp me-3" style="font-size: 70px;"></i>
+                <h1 class="text-light responsive-text">sh@gmail.com</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Start Map -->
+<div class="ps-5 pe-5 map-container">
+    <div id="mapid" style="width: 100%; height: 350px;"></div>
+</div>
+<!-- End Map -->
+
+
+<!-- Start Contact -->
+<div class="w-100 mt-5" style="background-color: var(--white-green-color);">
+    <div class="container py-5">
+        <div class="row py-5">
+            <div class="col-md-9 m-auto form">
+                <div class="row">
+                    <div class="form-group col-md-6 mb-3">
+                        <label class="label-text" for="inputname">Name</label>
+                        <input type="text" class="form-control mt-1" id="name" name="name" placeholder="Name" #name>
+                    </div>
+                    <div class="form-group col-md-6 mb-3">
+                        <label class="label-text" for="inputemail">Email</label>
+                        <input type="text" class="form-control mt-1" name="email" placeholder="Email" #phone>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="label-text" for="inputsubject">Subject</label>
+                    <input type="text" class="form-control mt-1" id="subject" name="subject" placeholder="Subject" #subject>
+                </div>
+                <div class="mb-3">
+                    <label class="label-text" for="inputmessage">Message</label>
+                    <textarea class="form-control mt-1" id="message" name="message" placeholder="Message"
+                        rows="8" #message></textarea>
+                </div>
+                <div class="row">
+                    <div class="col text-end mt-2">
+                        <button class="btn px-3 talk" (click)="Message(name.value, phone.value, subject.value, message.value)">Let's Talk</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Contact -->
+
+
+
+<div class="alert alert-success d-flex align-items-center {{alert()}}" role="alert">
+    <i class="bi bi-check-circle-fill me-3"></i>
+    <div>
+        You message have sent, We'll contact you soon! 
+        Note : Make sure your email is true
+    </div>
+</div>
